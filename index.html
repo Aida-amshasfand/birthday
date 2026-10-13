@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#120e16">
+    <meta name="robots" content="noindex,nofollow">
+    <meta name="description" content="A private bilingual birthday keepsake.">
+    <meta property="og:title" content="A private birthday keepsake">
+    <meta property="og:description" content="A small celebration, shared by invitation.">
+    <meta property="og:type" content="website">
+    <title>A private birthday keepsake · Birthday Glow</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Vazirmatn:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/styles.css">
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body data-theme="rose" data-language="en">
+    <a class="skip-link" href="#main" data-en="Skip to the page" data-fa="رفتن به صفحه">Skip to the page</a>
+    <div class="site-shell" id="main">
+      <header class="topbar">
+        <a class="brand" href="/" aria-label="Birthday Glow home">
+          <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 36 36" focusable="false"><path d="M18 30.1 5.7 18.7C-2.1 10.8 8.9 1.9 18 10.2c9.1-8.3 20.1.6 12.3 8.5L18 30.1Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8.4 18.4c2.7 2.5 4.7 3.8 7 4.4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+          <span class="brand-name">Birthday <i>Glow</i></span>
+        </a>
+        <div class="topbar-actions">
+          <div class="language-switch" role="group" aria-label="Choose language">
+            <button type="button" class="language-button is-active" data-language-button="en" aria-pressed="true">EN</button><span class="language-divider" aria-hidden="true">/</span><button type="button" class="language-button" data-language-button="fa" aria-pressed="false">فارسی</button>
+          </div>
+          <button type="button" class="text-button share-button" id="sharePublicLink" data-aria-en="Copy the birthday invitation link" data-aria-fa="کپیِ پیوندِ دعوتِ تولد">
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M7.6 12.4 12.4 7.6M8.6 6.4l.8-.8a3.1 3.1 0 0 1 4.4 4.4l-.8.8M11.4 13.6l-.8.8a3.1 3.1 0 0 1-4.4-4.4l.8-.8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span data-en="Share page" data-fa="اشتراک‌گذاری">Share page</span>
+          </button>
+          <a class="editor-link" href="/edit"><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="4.5" y="8.7" width="11" height="8" rx="1.7" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M6.8 8.5V6.2a3.2 3.2 0 1 1 6.4 0v2.3" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg><span data-en="Editor sign-in" data-fa="ورودِ ویرایشگر">Editor sign-in</span></a>
+        </div>
+      </header>
+
+      <main id="accessDenied" class="access-denied" hidden>
+        <span class="access-mark" aria-hidden="true">♡</span>
+        <p class="eyebrow" data-en="A PRIVATE INVITATION" data-fa="یک دعوتِ خصوصی">A PRIVATE INVITATION</p>
+        <h1 data-en="This page opens from its birthday link." data-fa="این صفحه با پیوندِ تولد باز می‌شود.">This page opens from its birthday link.</h1>
+        <p data-en="Ask the person who shared it with you to send the invitation link again." data-fa="از کسی که این صفحه را با تو به اشتراک گذاشته، بخواه پیوندِ دعوت را دوباره بفرستد.">Ask the person who shared it with you to send the invitation link again.</p>
+      </main>
+
+      <main id="publicView" class="public-view" hidden>
+        <section class="hero-section" aria-labelledby="heroTitle">
+          <div class="hero-copy">
+            <p class="eyebrow" id="heroEyebrow"></p>
+            <div class="date-stamp"><span class="date-spark" aria-hidden="true">✳</span><span id="birthdayDate"></span></div>
+            <h1 id="heroTitle"><span></span></h1>
+            <p class="hero-subtitle" id="heroSubtitle"></p>
+            <div class="signature-line"><span class="signature-line-rule" aria-hidden="true"></span><span data-en="A birthday wish, made personal" data-fa="آرزوی تولدی که مخصوصِ توست">A birthday wish, made personal</span></div>
+          </div>
+          <section class="heart-card" aria-label="Animated phrase heart">
+            <div class="card-topline"><span class="card-kicker" data-en="A HEARTFUL LITTLE UNIVERSE" data-fa="جهانی کوچک، پُر از عشق">A HEARTFUL LITTLE UNIVERSE</span><span class="card-orbit" aria-hidden="true"><i></i><i></i><i></i></span></div>
+            <div class="heart-stage" id="heartStage">
+              <div class="stage-halo" aria-hidden="true"></div><span class="floating-star star-one" aria-hidden="true">✦</span><span class="floating-star star-two" aria-hidden="true">✧</span><span class="floating-star star-three" aria-hidden="true">·</span>
+              <canvas id="heartCanvas" width="640" height="540" role="img" aria-label="An animated heart made from loving English and Persian phrases.">A heart made from loving English and Persian phrases.</canvas>
+              <div class="heart-caption" aria-hidden="true"><span class="caption-dot"></span><span data-en="every little thing, all in one heart" data-fa="تمامِ دوست‌داشتنی‌ها، در یک قلب">every little thing, all in one heart</span></div>
+            </div>
+            <div class="motion-controls" aria-label="Animation controls">
+              <button id="playToggle" class="icon-control" type="button" aria-label="Pause animation" title="Pause animation"><svg id="playIcon" viewBox="0 0 20 20" aria-hidden="true"><path d="M7 5.5v9M13 5.5v9" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"/></svg><span data-en="Pause" data-fa="مکث">Pause</span></button>
+              <button id="restartAnimation" class="icon-control" type="button" aria-label="Restart animation" title="Restart animation"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4.1 9a6.2 6.2 0 1 1 1.2 5.8M4.1 9V4.7M4.1 9h4.2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-en="Again" data-fa="دوباره">Again</span></button>
+              <label class="speed-control" for="speedRange"><span data-en="Pace" data-fa="سرعت">Pace</span><input id="speedRange" type="range" min="0.6" max="1.8" step="0.1" value="1" aria-label="Animation speed"><span class="speed-value" id="speedValue">1×</span></label>
+            </div>
+            <p class="motion-note" id="motionNote" aria-live="polite"></p>
+          </section>
+        </section>
+
+        <section class="letter-section" aria-labelledby="letterTitle">
+          <div class="section-marker"><span>01</span><span class="marker-rule" aria-hidden="true"></span><span data-en="A NOTE FOR YOU" data-fa="چند کلمه برای تو">A NOTE FOR YOU</span></div>
+          <div class="letter-layout">
+            <div class="letter-heading"><p class="eyebrow" data-en="WITH LOVE" data-fa="با عشق">WITH LOVE</p><h2 id="letterTitle"><span data-en="A small note, from the heart." data-fa="نامه‌ای کوچک از تهِ دل.">A small note, from the heart.</span></h2><button id="revealButton" class="reveal-button" type="button" aria-expanded="false" aria-controls="revealCard"><span data-en="Open your little note" data-fa="نامه‌ی کوچکت را باز کن">Open your little note</span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5 7.5 5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
+            <div class="letter-card" id="letterCard"><span class="letter-card-flower" aria-hidden="true">✿</span><p id="letterText"></p><p class="letter-signoff"><span data-en="Always yours," data-fa="همیشه برای تو،">Always yours,</span><br><i data-en="with all my heart" data-fa="با تمامِ قلبم">with all my heart</i></p></div>
+          </div>
+          <article class="reveal-card" id="revealCard" hidden><span class="reveal-star" aria-hidden="true">✦</span><p class="reveal-kicker" data-en="THE SECRET PART" data-fa="بخشِ پنهانیِ نامه">THE SECRET PART</p><p id="revealText"></p></article>
+        </section>
+
+        <footer class="site-footer"><span class="footer-mark" aria-hidden="true">♡</span><span data-en="Made with love, and meant to be shared." data-fa="ساخته‌شده با عشق، برای به‌اشتراک‌گذاشتن.">Made with love, and meant to be shared.</span><a href="/edit" data-en="Editor sign-in" data-fa="ورودِ ویرایشگر">Editor sign-in</a></footer>
+      </main>
+
+      <main id="editorView" class="editor-view" hidden>
+        <header class="editor-heading"><a href="/" class="back-link"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m12.5 4.5-5.5 5.5 5.5 5.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-en="Back to the birthday page" data-fa="بازگشت به صفحه‌ی تولد">Back to the birthday page</span></a><p class="eyebrow" data-en="JUST THE TWO OF US" data-fa="فقط برای من و تو">JUST THE TWO OF US</p><h1 data-en="Our shared space" data-fa="فضای مشترکِ ما">Our shared space</h1><p data-en="The private little room behind the birthday page." data-fa="اتاقِ کوچکِ خصوصی پشتِ صفحه‌ی تولد.">The private little room behind the birthday page.</p></header>
+        <section class="auth-card" id="authCard">
+          <div class="auth-tabs" role="tablist" aria-label="Editor account"><button class="auth-tab is-active" id="loginTab" type="button" role="tab" aria-selected="true" aria-controls="loginForm"><span data-en="Sign in" data-fa="ورود">Sign in</span></button><button class="auth-tab" id="signupTab" type="button" role="tab" aria-selected="false" aria-controls="signupForm" hidden><span data-en="Create account" data-fa="ساخت حساب">Create account</span></button></div>
+          <form id="loginForm" class="auth-form"><label for="loginAccount"><span data-en="Your 12-digit account number" data-fa="شماره‌حسابِ ۱۲ رقمیِ شما">Your 12-digit account number</span><input id="loginAccount" name="accountNumber" inputmode="numeric" pattern="[0-9]{12}" maxlength="12" autocomplete="username" dir="ltr" required></label><label for="loginPassword"><span data-en="Password" data-fa="گذرواژه">Password</span><input id="loginPassword" name="password" type="password" autocomplete="current-password" dir="ltr" required></label><button class="primary-button" type="submit"><span data-en="Enter our space" data-fa="ورود به فضای ما">Enter our space</span><span aria-hidden="true">↗</span></button></form>
+          <form id="signupForm" class="auth-form" hidden><label for="inviteCode"><span data-en="Private invitation code" data-fa="کدِ دعوتِ خصوصی">Private invitation code</span><input id="inviteCode" name="inviteCode" type="password" autocomplete="off" dir="ltr" required></label><p class="field-hint" data-en="Keep the shared code private. It can create only the two editor accounts." data-fa="کدِ مشترک را خصوصی نگه دارید؛ فقط برای ساختِ دو حسابِ ویرایشگر است.">Keep the shared code private. It can create only the two editor accounts.</p><label for="displayName"><span data-en="Name to show in our space" data-fa="نامی که در فضای ما نمایش داده شود">Name to show in our space</span><input id="displayName" name="displayName" maxlength="48" autocomplete="nickname" required></label><label for="signupPassword"><span data-en="Choose a password (at least 12 characters)" data-fa="گذرواژه‌ای انتخاب کنید (حداقل ۱۲ نویسه)">Choose a password (at least 12 characters)</span><input id="signupPassword" name="password" type="password" minlength="12" maxlength="256" autocomplete="new-password" dir="ltr" required></label><label for="signupPasswordAgain"><span data-en="Type the password again" data-fa="گذرواژه را دوباره وارد کنید">Type the password again</span><input id="signupPasswordAgain" name="passwordAgain" type="password" minlength="12" maxlength="256" autocomplete="new-password" dir="ltr" required></label><button class="primary-button" type="submit"><span data-en="Create our private account" data-fa="ساخت حسابِ خصوصیِ ما">Create our private account</span><span aria-hidden="true">↗</span></button></form>
+          <p id="authStatus" class="form-status" role="status" aria-live="polite"></p><p class="privacy-note"><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="4.5" y="8.5" width="11" height="8" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M6.8 8.3V6.2a3.2 3.2 0 0 1 6.4 0v2.1" fill="none" stroke="currentColor" stroke-width="1.4"/></svg><span data-en="Only the two invited accounts can edit the birthday page." data-fa="فقط دو حسابِ دعوت‌شده می‌توانند صفحه‌ی تولد را ویرایش کنند.">Only the two invited accounts can edit the birthday page.</span></p>
+        </section>
+
+        <section id="editorDashboard" class="editor-dashboard" hidden>
+          <div class="dashboard-welcome"><div><p class="eyebrow" data-en="WELCOME BACK" data-fa="خوش برگشتی">WELCOME BACK</p><h2><span data-en="Hello, " data-fa="سلام، ">Hello, </span><span id="editorName"></span></h2><p class="account-number-line"><span data-en="Your account number" data-fa="شماره‌حسابِ شما">Your account number</span>: <strong id="editorAccountNumber"></strong></p></div><button id="logoutButton" type="button" class="text-button"><span data-en="Sign out" data-fa="خروج">Sign out</span></button></div>
+          <div class="editor-actions"><button id="saveSettingsButton" type="button" class="primary-button"><span data-en="Save birthday page" data-fa="ذخیره‌ی صفحه‌ی تولد">Save birthday page</span><span aria-hidden="true">♡</span></button><button id="copyEditorLink" type="button" class="secondary-button"><span data-en="Copy private birthday link" data-fa="کپیِ پیوندِ خصوصیِ تولد">Copy private birthday link</span></button><a class="secondary-button" id="previewLink" href="/" target="_blank" rel="noopener"><span data-en="Preview the page" data-fa="پیش‌نمایشِ صفحه">Preview the page</span></a></div>
+          <p id="settingsStatus" class="form-status" role="status" aria-live="polite"></p>
+          <form id="settingsForm" class="settings-form">
+            <section class="editor-panel"><div class="panel-heading"><span class="panel-number">01</span><div><p class="eyebrow" data-en="THE WORDS" data-fa="کلمه‌ها">THE WORDS</p><h3 data-en="Make the wish sound like you." data-fa="آرزو را شبیهِ خودت بنویس.">Make the wish sound like you.</h3></div></div><div class="form-grid two-columns">
+              <label><span data-en="Her name (English)" data-fa="نامِ او (انگلیسی)">Her name (English)</span><input id="recipientEn" maxlength="48" required></label><label><span data-en="Her name (Persian)" data-fa="نامِ او (فارسی)">Her name (Persian)</span><input id="recipientFa" maxlength="48" dir="rtl" required></label>
+              <label><span data-en="Headline (English)" data-fa="عنوان (انگلیسی)">Headline (English)</span><input id="titleEn" maxlength="120" required></label><label><span data-en="Headline (Persian)" data-fa="عنوان (فارسی)">Headline (Persian)</span><input id="titleFa" maxlength="120" dir="rtl" required></label>
+              <label class="full-width"><span data-en="Small line beneath it (English)" data-fa="جمله‌ی کوتاهِ زیرِ عنوان (انگلیسی)">Small line beneath it (English)</span><input id="subtitleEn" maxlength="240" required></label><label class="full-width"><span data-en="Small line beneath it (Persian)" data-fa="جمله‌ی کوتاهِ زیرِ عنوان (فارسی)">Small line beneath it (Persian)</span><input id="subtitleFa" maxlength="240" dir="rtl" required></label>
+              <label class="full-width"><span data-en="Birthday letter (English)" data-fa="نامه‌ی تولد (انگلیسی)">Birthday letter (English)</span><textarea id="letterEn" rows="5" maxlength="1200" required></textarea></label><label class="full-width"><span data-en="Birthday letter (Persian)" data-fa="نامه‌ی تولد (فارسی)">Birthday letter (Persian)</span><textarea id="letterFa" rows="5" maxlength="1200" dir="rtl" required></textarea></label>
+              <label class="full-width"><span data-en="Secret note (English)" data-fa="پیامِ پنهانی (انگلیسی)">Secret note (English)</span><textarea id="revealEn" rows="3" maxlength="700" required></textarea></label><label class="full-width"><span data-en="Secret note (Persian)" data-fa="پیامِ پنهانی (فارسی)">Secret note (Persian)</span><textarea id="revealFa" rows="3" maxlength="700" dir="rtl" required></textarea></label>
+            </div></section>
+            <section class="editor-panel"><div class="panel-heading"><span class="panel-number">02</span><div><p class="eyebrow" data-en="THE HEART" data-fa="قلبِ صفحه">THE HEART</p><h3 data-en="Choose its little words and mood." data-fa="واژه‌ها و حال‌وهوایش را انتخاب کن.">Choose its little words and mood.</h3></div></div><div class="form-grid two-columns">
+              <label><span data-en="Heart phrases (English, one per line)" data-fa="واژه‌های قلب (انگلیسی، هر خط یکی)">Heart phrases (English, one per line)</span><textarea id="phrasesEn" rows="7" maxlength="4000"></textarea></label><label><span data-en="Heart phrases (Persian, one per line)" data-fa="واژه‌های قلب (فارسی، هر خط یکی)">Heart phrases (Persian, one per line)</span><textarea id="phrasesFa" rows="7" maxlength="4000" dir="rtl"></textarea></label>
+              <fieldset class="theme-picker full-width"><legend data-en="Page palette" data-fa="رنگ‌مایه‌ی صفحه">Page palette</legend><label class="theme-choice"><input type="radio" name="theme" value="rose"><span class="theme-swatch rose-swatch"></span><span data-en="Velvet rose" data-fa="رزِ مخملی">Velvet rose</span></label><label class="theme-choice"><input type="radio" name="theme" value="midnight"><span class="theme-swatch midnight-swatch"></span><span data-en="Midnight garden" data-fa="باغِ نیمه‌شب">Midnight garden</span></label><label class="theme-choice"><input type="radio" name="theme" value="golden"><span class="theme-swatch golden-swatch"></span><span data-en="Golden hour" data-fa="ساعتِ طلایی">Golden hour</span></label></fieldset>
+            </div></section>
+          </form>
+        </section>
+        <footer class="site-footer editor-footer"><a href="/" data-en="Back to the birthday page" data-fa="بازگشت به صفحه‌ی تولد">Back to the birthday page</a><span data-en="Private by invitation · shared by love" data-fa="خصوصی با دعوت · مشترک با عشق">Private by invitation · shared by love</span></footer>
+      </main>
+    </div>
+    <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  </body>
+</html>
